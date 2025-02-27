@@ -10073,11 +10073,11 @@ h.ToggleFrame = a.load'e' {
 
 
 local i = true
-if not WindUI.Flags[h.Flag] then
-    WindUI.Flags[h.Flag] = h.Value
-end
 if h.Value == nil then
 h.Value = false
+end
+if not WindUI.Flags[h.Flag] then
+    WindUI.Flags[h.Flag] = h.Value
 end
 
 h.UIElements.Toggle = c("Frame", {
