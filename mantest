@@ -9301,12 +9301,12 @@ local File = Folder.."//TeTraXSettings"
 local WindUI = {}
 WindUI.Flags = {}
 
-
-local function SaveConfiguration(h)
+print(WindUI.Flags)
+local function SaveConfiguration(ch)
 	local Data = {}
 	for i,v in pairs(WindUI.Flags) do
-		if i and h.__type == "Toggle" then
-			Data[i] = h.Value
+		if i and ch.__type == "Toggle" then
+			Data[i] = ch.Value
 		--[[else
 			Data[i] = v.Value or v.CurrentKeybind or v.Color or v.CurrentOption]]
 		end
@@ -10070,7 +10070,6 @@ local d = b.Tween
 local e = {}
 
 function e.New(f,g)
-    print(g.Flag)
 local h = {
     __type = "Toggle",
     Title = g.Title or "Toggle",
@@ -10080,6 +10079,7 @@ local h = {
     Callback = g.Callback or function()end,
     UIElements = {}
 }
+print(h.Flag)
 h.ToggleFrame = a.load'e' {
     Title = h.Title,
     Desc = h.Desc,
