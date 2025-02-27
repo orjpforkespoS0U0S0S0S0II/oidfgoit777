@@ -9297,7 +9297,7 @@ local b = {
 
 return b end function a.c()
 
-
+local WindUI = {}
 task.spawn(function()
 if WindUI
 and not WindUI.Flags then
@@ -10084,11 +10084,12 @@ and WindUI.Flags
 and WindUI.Flags[h.Flag] then
     print("js")
     WindUI.Flags[h.Flag] = j
-elseif not WindUI then
-    WindUI = {}
+elseif WindUI
+and  not WindUI.Flags[h.Flag] then
     warn("else")
     print(WindUI)
     WindUI.Flags[h.Flag] = j
+    print(WindUI.Flags[h.Flag])
 end
 
 h.UIElements.Toggle = c("Frame", {
@@ -10184,7 +10185,10 @@ end
 
 task.spawn(function()
     if WindUI.Flags[h.Flag] then
-    WindUI.Flags[h.Flag] = j
+        WindUI.Flags[h.Flag] = j
+    else
+        warn("flag value not found")
+        WindUI.Flags[h.Flag] = j
     end
     h.Callback(j)
     end)
