@@ -9301,10 +9301,13 @@ return b end function a.c()
 task.spawn(function()
 if WindUI
 and not WindUI.Flags then
+print("WindUI Found 1")
 WindUI.Flags = {}
 elseif not WindUI then
+    warn("WindUI Not Found")
     repeat task.wait() 
         if WindUI then
+            warn("WindUIcheck")
             WindUIcheck = true
         end
     until WindUI or WindUIcheck
@@ -10076,12 +10079,15 @@ local i = true
 if h.Value == nil then
 h.Value = false
 end
-if WindUI.Flags
+if WindUI
+and WindUI.Flags
 and WindUI.Flags[h.Flag] then
     print("js")
     WindUI.Flags[h.Flag] = j
-else
+elseif not WindUI then
+    WindUI = {}
     warn("else")
+    print(WindUI)
     WindUI.Flags[h.Flag] = j
 end
 
