@@ -10085,7 +10085,8 @@ and WindUI.Flags[h.Flag] then
     print("js")
     WindUI.Flags[h.Flag] = j
 elseif WindUI
-and  not WindUI.Flags[h.Flag] then
+and WindUI.Flags
+and not WindUI.Flags[h.Flag] then
     warn("else")
     print(WindUI)
     WindUI.Flags[h.Flag] = j
