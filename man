@@ -10058,7 +10058,7 @@ local h = {
     Title = g.Title or "Toggle",
     Desc = g.Desc or nil,
     Value = g.Value,
-    Flag = g.Flag or nil
+    Flag = g.Flag or nil,
     Callback = g.Callback or function()end,
     UIElements = {}
 }
