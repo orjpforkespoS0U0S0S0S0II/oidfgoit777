@@ -9296,9 +9296,23 @@ local b = {
 }
 
 return b end function a.c()
-
+local Folder = "TeTraX.IO"
+local File = Folder.."//TeTraXSettings"
 local WindUI = {}
 WindUI.Flags = {}
+
+
+local function SaveConfiguration(h)
+	local Data = {}
+	for i,v in pairs(WindUI.Flags) do
+		if h.__type == "Toggle" then
+			Data[i] = h.Value
+		--[[else
+			Data[i] = v.Value or v.CurrentKeybind or v.Color or v.CurrentOption]]
+		end
+	end	
+	writefile(File,(game:GetService("HttpService"):JSONEncode(Data)))
+end
 task.spawn(function()
 if WindUI
 and not WindUI.Flags then
@@ -10060,7 +10074,7 @@ local h = {
     __type = "Toggle",
     Title = g.Title or "Toggle",
     Desc = g.Desc or nil,
-    Value = g.Value,
+    Value = g.Value
     Flag = g.Flag or nil,
     Callback = g.Callback or function()end,
     UIElements = {}
@@ -10185,12 +10199,7 @@ d(h.UIElements.Toggle,0.1, {
 end
 
 task.spawn(function()
-    if WindUI.Flags[h.Flag] then
-        WindUI.Flags[h.Flag] = j
-    else
-        warn("flag value not found")
-        WindUI.Flags[h.Flag] = j
-    end
+    SaveConfiguration(h)
     h.Callback(j)
     end)
 
