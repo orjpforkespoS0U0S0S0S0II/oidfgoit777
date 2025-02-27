@@ -9298,11 +9298,11 @@ local b = {
 return b end function a.c()
 
 local WindUI = {}
+WindUI.Flags = {}
 task.spawn(function()
 if WindUI
 and not WindUI.Flags then
 print("WindUI Found 1")
-WindUI.Flags = {}
 elseif not WindUI then
     warn("WindUI Not Found")
     repeat task.wait() 
