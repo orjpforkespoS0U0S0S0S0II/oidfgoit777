@@ -10082,7 +10082,7 @@ and WindUI.Flags[h.Flag] then
     WindUI.Flags[h.Flag] = j
 else
     warn("else")
-    WindUI.Flags[h.Flags] = j
+    WindUI.Flags[h.Flag] = j
 end
 
 h.UIElements.Toggle = c("Frame", {
