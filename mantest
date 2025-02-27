@@ -9305,7 +9305,7 @@ WindUI.Flags = {}
 local function SaveConfiguration(h)
 	local Data = {}
 	for i,v in pairs(WindUI.Flags) do
-		if h.__type == "Toggle" then
+		if i and h.__type == "Toggle" then
 			Data[i] = h.Value
 		--[[else
 			Data[i] = v.Value or v.CurrentKeybind or v.Color or v.CurrentOption]]
@@ -10070,11 +10070,12 @@ local d = b.Tween
 local e = {}
 
 function e.New(f,g)
+    print(g.Flag)
 local h = {
     __type = "Toggle",
     Title = g.Title or "Toggle",
     Desc = g.Desc or nil,
-    Value = g.Value
+    Value = g.Value,
     Flag = g.Flag or nil,
     Callback = g.Callback or function()end,
     UIElements = {}
@@ -10087,7 +10088,7 @@ h.ToggleFrame = a.load'e' {
     TextOffset = 44,
     Hover = true,
 }
-
+print(h.Flag)
 
 local i = true
 if h.Value == nil then
@@ -10102,11 +10103,11 @@ elseif WindUI
 and WindUI.Flags
 and not WindUI.Flags[h.Flag] then
     warn("else")
+    WindUI.Flags[h.Flag] = h.Value
     print(WindUI)
-    WindUI.Flags[h.Flag] = j
     print(WindUI.Flags[h.Flag])
 end
-
+warn("fin")
 h.UIElements.Toggle = c("Frame", {
     BackgroundTransparency = .95,
     BackgroundColor3 = Color3.fromHex(g.Theme.Text),
