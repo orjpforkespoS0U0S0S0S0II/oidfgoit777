@@ -14597,7 +14597,7 @@ t.UIElements.Main.Gradient.UIGradient.Transparency = NumberSequence.new {
 }
 end
 
-task.delay(13,function()
+task.delay(30,function()
     if LoadFile then
         WindUI.LoadConfiguration(LoadFile)
     end
