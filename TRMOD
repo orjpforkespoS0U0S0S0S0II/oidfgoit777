@@ -8,7 +8,7 @@ getgenv().translation = {
             and Translate == "Russian" then
                 return "Главная"
             else
-                return "Main"
+                return "main"
             end
         end,
         ["Players"] = function()
@@ -19,7 +19,7 @@ getgenv().translation = {
             and Translate == "Russian" then
                 return "Игроки"
             else
-                return "Players"
+                return "players"
             end
         end,
         ["Risky"] = function()
@@ -30,7 +30,7 @@ getgenv().translation = {
             and Translate == "Russian" then
                 return "Рискованно"
             else
-                return "Risky"
+                return "risky"
             end
         end,
         ["Magick"] = function()
@@ -41,7 +41,7 @@ getgenv().translation = {
             and Translate == "Russian" then
                 return "Магия"
             else
-                return "Magick"
+                return "magick"
             end
         end,
         ["Cash"] = function()
@@ -52,7 +52,7 @@ getgenv().translation = {
             and Translate == "Russian" then
                 return "Деньги"
             else
-                return "Cash"
+                return "cash"
             end
         end,
         ["ItemFarm"] = function()
@@ -63,7 +63,7 @@ getgenv().translation = {
             and Translate == "Russian" then
                 return "Фарм Предметов"
             else
-                return "ItemFarm"
+                return "items"
             end
         end,
         ["Buy"] = function()
@@ -74,7 +74,7 @@ getgenv().translation = {
             and Translate == "Russian" then
                 return "Купить"
             else
-                return "Buy"
+                return "buy"
             end
         end,
         ["Teleport"] = function()
@@ -85,7 +85,7 @@ getgenv().translation = {
             and Translate == "Russian" then
                 return "Телепорты"
             else
-                return "Teleport"
+                return "teleport"
             end
         end,
         ["Visuals"] = function()
@@ -96,7 +96,7 @@ getgenv().translation = {
             and Translate == "Russian" then
                 return "Визуал"
             else
-                return "Visuals"
+                return "visuals"
             end
         end,
         ["Other"] = function()
@@ -107,7 +107,7 @@ getgenv().translation = {
             and Translate == "Russian" then
                 return "Другое"
             else
-                return "Other"
+                return "other"
             end
         end,
         ["Testing"] = function()
@@ -118,7 +118,7 @@ getgenv().translation = {
             and Translate == "Russian" then
                 return "Тест"
             else
-                return "Testing"
+                return "testing"
             end
         end,
         ["UI Settings"] = function()
@@ -129,7 +129,7 @@ getgenv().translation = {
             and Translate == "Russian" then
                 return ""
             else
-                return "UI Settings"
+                return "settings"
             end
         end,
     },
