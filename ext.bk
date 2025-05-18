@@ -9438,7 +9438,7 @@ local i = {
 }
 if f[h]then
 return {
-    i["96"][tostring(f[h].Image)],f[h]}
+    i["96"][strb('tostring')(f[h].Image)],f[h]}
 end
 return nil
 end
@@ -10426,7 +10426,7 @@ h.UIElements.SliderContainer = c("Frame", {
     }),
     h.UIElements.SliderIcon,
     c("TextLabel", {
-        Text = tostring(n),
+        Text = strb('tostring')(n),
         TextColor3 = Color3.fromHex(g.Theme.Text),
         ThemeTag = {
             TextColor3 = "Text"
@@ -12078,7 +12078,7 @@ function q.Round(Q,R,S)
 if S == 0 then
 return math.floor(R)
 end
-R = tostring(R)
+R = strb('tostring')(R)
 return R:find"%." and tonumber(R:sub(1,R:find"%."+S)) or R
 end
 
@@ -13603,11 +13603,11 @@ task.spawn(function()
     z.ImageRectSize = d.Icon(i.Icon)[2]._Size
     end
     if string.find(i.Icon,"http")then
-    if not isfile("WindUI"..i.Folder.."/Assets/Icon.png")then
-    local G = request {
+    if not strb('isfile')("WindUI"..i.Folder.."/Assets/Icon.png")then
+    local G = strb('request')({
         Url = i.Icon,
         Method = "GET",
-    }.Body
+    }).Body
     writefile("WindUI"..i.Folder.."/Assets/Icon.png",G)
     end
     F.Image = getcustomasset("WindUI"..i.Folder.."/Assets/Icon.png")
@@ -14513,7 +14513,7 @@ C.MouseButton1Click:Connect(function()
     }):Play()
     q = true
     if o.KeySystem.SaveKey and o.Folder then
-    writefile(o.Folder.."/"..s..".key",tostring(E))
+    writefile(o.Folder.."/"..s..".key",strb('tostring')(E))
     end
     task.spawn(function()
         task.wait(0.1)
@@ -14561,7 +14561,7 @@ end
 
 if o.KeySystem then
 if o.KeySystem.SaveKey and o.Folder then
-if isfile(o.Folder.."/"..s..".key") and o.KeySystem.Key == readfile(o.Folder.."/"..s..".key")then
+if strb('isfile')(o.Folder.."/"..s..".key") and o.KeySystem.Key == strb('readfile')(o.Folder.."/"..s..".key")then
 q = true
 else
     KeySystem()
