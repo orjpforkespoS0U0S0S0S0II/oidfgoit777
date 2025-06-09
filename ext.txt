@@ -13594,7 +13594,7 @@ task.spawn(function()
     F.Image = d.Icon(i.Icon)[1]
     F.ImageRectOffset = d.Icon(i.Icon)[2].ImageRectPosition
     F.ImageRectSize = d.Icon(i.Icon)[2]._Size
-    if d and i and i.Icon and d.Icon and d.Icon(i.Icon) and d.Icon(i.Icon)[1] ~= nil then
+    if z and z.Image and d and i and i.Icon and d.Icon and d.Icon(i.Icon) and d.Icon(i.Icon)[1] ~= nil then
     z.Image = d.Icon(i.Icon)[1]
     z.ImageRectOffset = d.Icon(i.Icon)[2].ImageRectPosition
     z.ImageRectSize = d.Icon(i.Icon)[2]._Size
