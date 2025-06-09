@@ -11114,8 +11114,11 @@ g(k.UIElements.Dropdown.ImageLabel,.15, {
 UpdatePosition()
 end
 function k.Close(o)
+if k and k.DropdownFrame == nil then
+	return
+end
 k.Opened = false
-print(k.DropdownFrame)
+
 g(k.UIElements.Menu,0.1, {
     Size = UDim2.new(
         1,0,
