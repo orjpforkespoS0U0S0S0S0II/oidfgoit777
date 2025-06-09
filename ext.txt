@@ -11137,7 +11137,7 @@ k.UIElements.Dropdown.MouseButton1Click:Connect(function()
     end)
 
 b.InputBegan:Connect(function(o)
-    if
+    if k and k.UIElements and
         o.UserInputType == Enum.UserInputType.MouseButton1 or o.UserInputType == Enum.UserInputType.Touch
     then
     local p,q = k.UIElements.MenuCanvas.AbsolutePosition,k.UIElements.MenuCanvas.AbsoluteSize
