@@ -11045,6 +11045,7 @@ u.UIElements.TabItem.MouseButton1Click:Connect(function()
     table.insert(k.Value,u.Name)
     else
         if not k.AllowNone and #k.Value == 1 then
+        k.Opened = false
     return
     end
     u.Selected = false
