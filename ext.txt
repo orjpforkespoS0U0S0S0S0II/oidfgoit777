@@ -13683,13 +13683,13 @@ f(k,0.25, {
 },Enum.EasingStyle.Exponential,Enum.EasingDirection.Out):Play()
 
 task.spawn(function()
-    task.wait(0.25)
+    task.wait(0.30)
     i.UIElements.Main.Visible = false
     end)
 
 function G.Destroy(H)
 i.Destroyed = true
-task.wait(0.25)
+task.wait(0.30)
 h.Parent.Parent:Destroy()
 end
 
@@ -13699,7 +13699,7 @@ end
 v.MouseButton1Click:Connect(function()
     i:Close()
     task.spawn(function()
-        task.wait(.3)
+        task.wait(.4)
         if not w then
         x.Visible = true
         end
