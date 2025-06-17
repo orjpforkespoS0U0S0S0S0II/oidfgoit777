@@ -11045,7 +11045,6 @@ u.UIElements.TabItem.MouseButton1Click:Connect(function()
     table.insert(k.Value,u.Name)
     else
         if not k.AllowNone and #k.Value == 1 then
-        k.Opened = false
     return
     end
     u.Selected = false
@@ -11068,6 +11067,7 @@ u.UIElements.TabItem.MouseButton1Click:Connect(function()
     w.Selected = false
     end
     u.Selected = true
+    k:Close()
     g(u.UIElements.TabItem,0.1, {
         BackgroundTransparency = .93
     }):Play()
