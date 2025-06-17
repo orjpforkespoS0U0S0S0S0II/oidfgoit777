@@ -14207,6 +14207,9 @@ local u = t.Create(true)
 
 
 u.UIElements.Main.AutomaticSize = "XY"
+local uiscale = Instance.new("UIScale", u.UIElements.Main)
+uiscale.Name = "UIScale"
+uiscale.Scale = getgevn().uiscaler or 1.2
 
 local v = f("ImageLabel", {
     Image = "rbxassetid://8992230677",
